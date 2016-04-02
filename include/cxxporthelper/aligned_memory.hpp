@@ -177,9 +177,9 @@ public:
      * @returns pointer to the allocated buffer
      */
     /// @{
-    T *get() CXXPH_NOEXCEPT { return ptr_; }
+    T *get() CXXPH_NOEXCEPT { return ptr_.get(); }
 
-    const T *get() const CXXPH_NOEXCEPT { return ptr_; }
+    const T *get() const CXXPH_NOEXCEPT { return ptr_.get(); }
     /// @}
 
     /**
