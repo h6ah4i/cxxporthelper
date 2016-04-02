@@ -25,7 +25,7 @@ make
 Latest version
 ---
 
-- Version 0.5.0  (November 23, 2014)
+- Version 0.5.1  (April 2, 2016)
 
 
 License
