@@ -68,6 +68,11 @@ LOCAL_STATIC_LIBRARIES := cpufeatures
 LOCAL_EXPORT_C_INCLUDES := $(SHARED_C_INCLUDES)
 LOCAL_EXPORT_CFLAGS := $(SHARED_CFLAGS)
 
+# if $(APP_STL) == {c++_static | c++_shared}
+ifneq (, $(filter c++_static c++_shared, $(APP_STL)))
+    LOCAL_EXPORT_LDLIBS := -latomic
+endif
+
 # clear local variables
 SHARED_C_INCLUDES :=
 SHARED_CFLAGS := 
